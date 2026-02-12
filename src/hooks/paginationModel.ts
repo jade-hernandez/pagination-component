@@ -7,7 +7,6 @@ export function getPaginationItems(totalPages: number, activePage: number): Pagi
   const pages = Array.from({ length: totalPages }, (_, i) => i + 1);
   const a = Math.max(0, Math.min(activePage - 1, totalPages - 1));
 
-  // tweak this threshold if your design wants ellipses sooner
   if (totalPages <= 7) return pages;
 
   const visible = new Set<number>([0, totalPages - 1]);

@@ -1,6 +1,6 @@
 import { RiArrowRightSLine, RiArrowLeftSLine } from "react-icons/ri";
 import { ELLIPSIS } from "../hooks/paginationModel";
-import { usePagination } from "../hooks/usePagination"; // or import getPaginationItems directly
+import { usePagination } from "../hooks/usePagination";
 
 type PaginationProps = {
   totalPages: number;
@@ -21,7 +21,6 @@ export default function Pagination({
   showLabels = true
 }: PaginationProps) {
   const items = usePagination(totalPages, activePage);
-
   const isFirstPage = activePage <= 1;
   const isLastPage = activePage >= totalPages;
 

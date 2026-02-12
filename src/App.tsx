@@ -8,33 +8,31 @@ function App() {
   const [page4, setPage4] = useState(5);
 
   return (
-    <main className='mx-auto mt-50 flex w-full min-w-dvw flex-col items-center justify-center lg:min-h-screen'>
-      <div className='flex flex-col gap-6'>
-        <Pagination
-          totalPages={3}
-          activePage={page1}
-          onPageChange={setPage1}
-        />
+    <main className='mx-auto flex min-h-dvh w-full min-w-dvw flex-col items-center gap-6 pt-50 lg:pt-51'>
+      <Pagination
+        totalPages={3}
+        activePage={page1}
+        onPageChange={setPage1}
+      />
 
-        <Pagination
-          totalPages={3}
-          activePage={page2}
-          onPageChange={setPage2}
-          showLabels={false}
-        />
+      <Pagination
+        totalPages={3}
+        activePage={page2}
+        onPageChange={setPage2}
+        showLabels={false}
+      />
 
+      <Pagination
+        totalPages={10}
+        activePage={page3}
+        onPageChange={setPage3}
+      />
+      <div className='hidden md:block'>
         <Pagination
           totalPages={10}
-          activePage={page3}
-          onPageChange={setPage3}
+          activePage={page4}
+          onPageChange={setPage4}
         />
-        <div className='hidden md:block'>
-          <Pagination
-            totalPages={10}
-            activePage={page4}
-            onPageChange={setPage4}
-          />
-        </div>
       </div>
     </main>
   );
