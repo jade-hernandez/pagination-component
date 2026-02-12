@@ -8,7 +8,7 @@ function App() {
   const [page4, setPage4] = useState(5);
 
   return (
-    <main className='mx-auto flex min-h-screen w-full min-w-dvw flex-col items-center justify-center'>
+    <main className='mx-auto mt-50 flex w-full min-w-dvw flex-col items-center justify-center lg:min-h-screen'>
       <div className='flex flex-col gap-6'>
         <Pagination
           totalPages={3}
