@@ -13,6 +13,7 @@ function App() {
         totalPages={3}
         activePage={page1}
         onPageChange={setPage1}
+        ariaLabel='Pagination: 3 pages with labels'
       />
 
       <Pagination
@@ -20,18 +21,22 @@ function App() {
         activePage={page2}
         onPageChange={setPage2}
         showLabels={false}
+        ariaLabel='Pagination: 3 pages compact'
       />
 
       <Pagination
         totalPages={10}
         activePage={page3}
         onPageChange={setPage3}
+        ariaLabel='Pagination: 10 pages full labels'
       />
+
       <div className='hidden md:block'>
         <Pagination
           totalPages={10}
           activePage={page4}
           onPageChange={setPage4}
+          ariaLabel='Pagination: 10 pages desktop'
         />
       </div>
     </main>
